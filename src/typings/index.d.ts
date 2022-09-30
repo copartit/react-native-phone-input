@@ -44,6 +44,7 @@ export interface ReactNativeCountryPickerProps {
     onPressConfirm?: Function;
     onSubmit?: Function;
     pickerBackgroundColor?: string;
+    pickerTextColor?: string;
     itemStyle?: ViewStyle;
 }
 

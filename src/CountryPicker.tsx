@@ -73,6 +73,7 @@ export default class CountryPicker extends Component<ReactNativeCountryPickerPro
     render() {
         const { buttonColor } = this.state;
         const itemStyle = this.props.itemStyle || {};
+        const stylePropObj = { ...styles.bottomPicker, color: this.props.pickerTextColor, backgroundColor: this.props.pickerBackgroundColor };
         return (
             <Modal
                 animationType="slide"
@@ -108,11 +109,12 @@ export default class CountryPicker extends Component<ReactNativeCountryPickerPro
                                 ref={(ref) => {
                                     this.picker = ref;
                                 }}
-                                style={styles.bottomPicker}
+                                style={stylePropObj}
                                 selectedValue={this.state.selectedCountry}
                                 onValueChange={(country) => this.onValueChange(country)}
                                 itemStyle={itemStyle}
                                 mode="dialog"
+                                dropdownIconColor={this.props.pickerTextColor}
                             >
                                 {Country.getAll().map((country, index) => this.renderItem(country, index))}
                             </Picker>
