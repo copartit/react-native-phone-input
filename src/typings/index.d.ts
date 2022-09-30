@@ -114,6 +114,10 @@ export interface ReactNativePhoneInputProps<TextComponentType extends React.Comp
     /**
      * Custom styles for text in country picker eg. {{fontSize: 14}}
      */
+    pickerTextColor?: string;
+    /**
+     * Custom picker panel content color
+     */
     pickerItemStyle?: ViewStyle;
     /**
      * Cancel word
